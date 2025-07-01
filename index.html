@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Auth System</title>
+       <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Form -->
+        <div class="form-container" id="login-form">
+            <h2>Welcome Back</h2>
+            <div class="message error" id="login-error"></div>
+            <form id="login">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                    <span class="password-toggle" onclick="togglePassword('login-password')">👁️</span>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <div class="toggle-form">
+                Don't have an account? <a href="#" id="show-register">Register</a>
+            </div>
+        </div>
+
+        <!-- Register Form -->
+        <div class="form-container" id="register-form" style="display: none;">
+            <h2>Create Account</h2>
+            <div class="message error" id="register-error"></div>
+            <div class="message success" id="register-success"></div>
+            <form id="register">
+                <div class="form-group">
+                    <label for="register-name">Full Name</label>
+                    <input type="text" id="register-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" required>
+                    <span class="password-toggle" onclick="togglePassword('register-password')">👁️</span>
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm-password">Confirm Password</label>
+                    <input type="password" id="register-confirm-password" required>
+                    <span class="password-toggle" onclick="togglePassword('register-confirm-password')">👁️</span>
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+            <div class="toggle-form">
+                Already have an account? <a href="#" id="show-login">Login</a>
+            </div>
+        </div>
+        <script src="script.js"></script>
+</body>
+</html>
